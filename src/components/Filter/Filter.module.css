@@ -1,0 +1,30 @@
+.filter {
+  flex-basis: calc(20% - 10px);
+}
+
+.card {
+  overflow: hidden;
+  padding: 0;
+}
+
+.filters {
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.filters input {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+@media screen and (max-width: 999px) {
+  .filter h2 {
+    text-align: center;
+  }
+
+  .filters {
+    height: 10rem;
+  }
+}

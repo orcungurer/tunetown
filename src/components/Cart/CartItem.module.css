@@ -1,0 +1,65 @@
+.item {
+  margin-right: 1rem;
+}
+
+.item img {
+  width: 15%;
+  border-radius: 0.25rem;
+}
+
+header {
+  display: flex;
+}
+
+.info {
+  margin: 0.5rem 0 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.info p {
+  margin: 0;
+}
+
+.band {
+  color: #606060;
+  font-size: 0.75rem;
+}
+
+.album {
+  color: #3a3a3a;
+  font-weight: 600;
+}
+
+.details {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.itemprice {
+  font-weight: normal;
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+.actions button,
+.actions span {
+  padding: 0.25rem 1rem;
+}
+
+li hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 1rem 0;
+}

@@ -1,0 +1,24 @@
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 5%; /* because our 4rem header fixed */
+}
+
+/* we set flex-basis on all elements */
+/* we then override it for Filter and Products as 20 and 55 */
+.flex-container > * {
+  flex-basis: calc(25% - 10px);
+}
+
+@media screen and (max-width: 1299px) {
+  .flex-container {
+    padding: 4rem 2%;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .flex-container {
+    padding: 4rem 5%;
+    flex-direction: column;
+  }
+}

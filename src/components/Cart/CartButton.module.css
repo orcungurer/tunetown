@@ -1,0 +1,49 @@
+.button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.button:hover,
+.button:active {
+  color: #f94c57;
+  background-color: #ffffff;
+}
+
+.button span {
+  margin: 0 0.5rem;
+}
+
+.button:hover .badge,
+.button:active .badge {
+  color: #ffffff;
+  background-color: #f94c57;
+}
+
+.icon {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.badge {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  color: #f94c57;
+  padding: 0.25rem 1rem;
+}
+
+@media screen and (max-width: 999px) {
+  .button {
+    width: 6rem;
+    padding: 0.5rem;
+  }
+
+  .button span {
+    margin: 0 0.25rem;
+  }
+}

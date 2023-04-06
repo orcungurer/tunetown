@@ -1,0 +1,142 @@
+.products {
+  flex-basis: calc(80% - 10px);
+}
+
+.products header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > * {
+  flex-basis: calc(33.33% - 10px);
+}
+
+.listBy span {
+  display: inline-block;
+  width: 3rem;
+  text-align: center;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  background-color: #f94c57;
+  color: #000000;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.listBy span:hover {
+  background-color: #000000;
+  color: #f94c57;
+}
+
+.listBy span:active,
+.listBy span:focus {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.products h2 {
+  text-align: center;
+}
+
+.sortBy {
+  padding-left: 13.33%;
+}
+
+/* .sortBy select {
+  background-color: #f94c57;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  width: 10rem;
+}
+
+.sortBy select:focus {
+  outline: none;
+} */
+
+.product-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; cause problem */
+  justify-content: flex-start;
+}
+
+/* .list3Item {
+  gap: 0.939rem;
+} */
+
+.list4Item {
+  gap: 0.8333rem;
+}
+
+.list5Item {
+  gap: 0.781rem;
+}
+
+/* .products li {
+  margin-bottom: 1rem; commented due to the justify above
+} */
+
+@media screen and (max-width: 999px) {
+  .listBy {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .listBy {
+    visibility: hidden;
+  }
+
+  .sortBy {
+    padding-left: 8.33%;
+  }
+
+  .products li {
+    width: calc(25% - 10px);
+  }
+
+  .product-items {
+    gap: 0.8333rem;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .listBy {
+    visibility: hidden;
+  }
+
+  .sortBy select {
+    width: 7.5rem;
+  }
+
+  .products li {
+    width: calc(33.33% - 10px);
+  }
+
+  .product-items {
+    gap: 0.939rem;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .listBy {
+    visibility: hidden;
+  }
+
+  .sortBy {
+    padding-left: 0;
+  }
+
+  .products li {
+    width: calc(50% - 10px);
+  }
+
+  .product-items {
+    gap: 1.25rem;
+  }
+}

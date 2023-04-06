@@ -1,0 +1,76 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5%;
+  padding: 2rem 0;
+  border-top: 1px solid #eee;
+}
+
+.brand,
+.slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand p {
+  margin: 0;
+  font-weight: 400;
+}
+
+.brand span {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.brand img {
+  width: 3rem;
+}
+
+.slogan {
+  gap: 0.25rem;
+}
+
+.slogan p {
+  margin: 0;
+  font-style: italic;
+}
+
+.slogan img {
+  width: 5rem;
+}
+
+.links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.links a {
+  display: flex; /* because a tag had 4px bottom */
+}
+
+.links a:hover,
+.links a:active {
+  color: #000000;
+}
+
+.brand p,
+.brand span,
+.slogan p,
+.links a {
+  color: #303030;
+}
+
+@media screen and (max-width: 999px) {
+  .footer {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+  .slogan {
+    gap: 0.5rem;
+  }
+  .links {
+    gap: 1rem;
+  }
+}
