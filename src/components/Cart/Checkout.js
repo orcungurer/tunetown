@@ -10,6 +10,8 @@ const Checkout = (props) => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
 
+  const today = new Date().toString();
+
   const [formInputsValidity, setFormInputsValidity] = useState({
     name: true,
     surname: true,
@@ -57,6 +59,7 @@ const Checkout = (props) => {
       surname: enteredSurname,
       city: enteredCity,
       email: enteredEmail,
+      date: today,
     };
 
     const cartData = {
