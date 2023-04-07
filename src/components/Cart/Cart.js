@@ -14,23 +14,6 @@ const Cart = () => {
 
   const [isCheckout, setIsCheckout] = useState(false);
   const notification = useSelector((state) => state.ui.notification);
-  let isSubmitting = false;
-  let didSubmit = false;
-  let title = "";
-  let message = "";
-
-  if (notification && notification.status === "pending") {
-    isSubmitting = true;
-    title = notification.title;
-    message = notification.message;
-  }
-
-  if (notification && notification.status === "success") {
-    isSubmitting = false;
-    didSubmit = true;
-    title = notification.title;
-    message = notification.message;
-  }
 
   const hideCartHandler = () => {
     dispatch(uiActions.toggle());
@@ -110,12 +93,16 @@ const Cart = () => {
     </Fragment>
   );
 
-  const isSubmittingModalContent = <p>{message}</p>;
+  const isSubmittingModalContent = (
+    <p>{notification && notification.message}</p>
+  );
 
   const didSubmitModalContent = (
     <Fragment>
-      <h2 className={classes["notification-title"]}>{title}</h2>
-      <p>{message}</p>
+      <h2 className={classes["notification-title"]}>
+        {notification && notification.title}
+      </h2>
+      <p>{notification && notification.message}</p>
       <div className={classes.actions}>
         <button className={classes["close-button"]} onClick={hideCartHandler}>
           Close
@@ -126,9 +113,13 @@ const Cart = () => {
 
   return (
     <Modal onClose={hideCartHandler}>
-      {!isSubmitting && !didSubmit && cartModalContent}
-      {isSubmitting && isSubmittingModalContent}
-      {!isSubmitting && didSubmit && didSubmitModalContent}
+      {!notification && cartModalContent}
+      {notification &&
+        notification.status === "pending" &&
+        isSubmittingModalContent}
+      {notification &&
+        notification.status === "success" &&
+        didSubmitModalContent}
     </Modal>
   );
 };

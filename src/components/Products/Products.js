@@ -8,7 +8,7 @@ const Products = () => {
   const products = useSelector((state) => state.filter.products);
   const selectedGenres = useSelector((state) => state.filter.selectedGenres);
   const selectedArtists = useSelector((state) => state.filter.selectedArtists);
-  const [sortOrder, setSortOrder] = useState("");
+  const [sortOrder, setSortOrder] = useState("releaseDateDesc");
   const [listBy, setListBy] = useState("5");
 
   let specialClasses = `list${listBy}Item`;
@@ -24,9 +24,6 @@ const Products = () => {
     }
     return true;
   });
-
-  // we directly sort our products as release date descending
-  filteredProducts.sort((a, b) => b.releaseDate - a.releaseDate);
 
   const groupedOptions = [
     { value: "releaseDateDesc", label: "Sort By" },
