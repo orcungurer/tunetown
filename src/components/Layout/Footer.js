@@ -7,6 +7,19 @@ import TuneTownTextBlack from "../../assets/TuneTownTextBlack.svg";
 const Footer = () => {
   const year = new Date().getFullYear();
 
+  const socials = [
+    {
+      id: 1,
+      icon: <LinkedInIcon />,
+      link: "https://www.linkedin.com/in/orcungurer/",
+    },
+    {
+      id: 2,
+      icon: <GithubIcon />,
+      link: "https://github.com/orcungurer/",
+    },
+  ];
+
   return (
     <footer className={classes.footer}>
       <div className={classes.brand}>
@@ -18,12 +31,11 @@ const Footer = () => {
         <img src={TuneTownTextBlack} alt="TuneTownTextBlack" />
       </div>
       <div className={classes.links}>
-        <a href="https://www.linkedin.com/in/orcungurer/">
-          <LinkedInIcon />
-        </a>
-        <a href="https://github.com/orcungurer/">
-          <GithubIcon />
-        </a>
+        {socials.map((social) => (
+          <a key={social.id} href={social.link}>
+            {social.icon}
+          </a>
+        ))}
       </div>
     </footer>
   );
