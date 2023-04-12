@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tunetown/static/css/main.e320b86d.css",
-    "main.js": "/tunetown/static/js/main.91d43144.js",
+    "main.js": "/tunetown/static/js/main.128f24a5.js",
     "static/media/19.jpeg": "/tunetown/static/media/19.ac5f0491eb4faf68778a.jpeg",
     "static/media/9.jpeg": "/tunetown/static/media/9.6f43efafb5f4e517f835.jpeg",
     "static/media/28.jpeg": "/tunetown/static/media/28.d95d02082120f56c12fb.jpeg",
@@ -35,10 +35,10 @@
     "static/media/ogblack.svg": "/tunetown/static/media/ogblack.aaabb6d1cd316c8426cfd330acf96538.svg",
     "index.html": "/tunetown/index.html",
     "main.e320b86d.css.map": "/tunetown/static/css/main.e320b86d.css.map",
-    "main.91d43144.js.map": "/tunetown/static/js/main.91d43144.js.map"
+    "main.128f24a5.js.map": "/tunetown/static/js/main.128f24a5.js.map"
   },
   "entrypoints": [
     "static/css/main.e320b86d.css",
-    "static/js/main.91d43144.js"
+    "static/js/main.128f24a5.js"
   ]
 }
